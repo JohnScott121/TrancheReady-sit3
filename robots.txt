@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-# Add this when you have a sitemap:
-# Sitemap: https://trancheready.com/sitemap.xml
+Sitemap: https://trancheready.com/sitemap.xml
