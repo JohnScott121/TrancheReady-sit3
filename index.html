@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>TrancheReady — AML/CTF Tranche 2 Evidence Packs</title>
+  <meta name="description" content="Upload CSVs → get explainable risk scores, monitoring cases, and a signed SHA-256 evidence pack auditors can verify.">
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/style.css">
+
+  <!-- Open Graph (optional; add a real image later) -->
+  <meta property="og:title" content="TrancheReady — Audit-ready AML packs in minutes">
+  <meta property="og:description" content="CSV in, ZIP out. Signed manifests auditors love.">
+  <!-- <meta property="og:image" content="https://trancheready.com/assets/og-card.png"> -->
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+  <!-- Top Nav -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="/"><img src="/assets/logo.svg" alt="TrancheReady">TrancheReady</a>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a class="btn ghost" id="themeToggle" href="javascript:void(0)">Light/Dark</a>
+        <a class="btn" href="APP_HOST">Open App</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Audit-ready AML packs in minutes.</h1>
+          <p>Upload your <b>Clients</b> & <b>Transactions</b> CSVs. TrancheReady generates explainable risk scores, monitoring cases, and a signed SHA-256 evidence pack with a shareable verify link.</p>
+          <div class="cta-row">
+            <a class="btn" href="APP_HOST">Try Free Scan</a>
+            <a class="btn ghost" href="#features">See features</a>
+          </div>
+          <div class="trust-strip">
+            <span>CSV in • ZIP out</span>
+            <span>Signed manifests</span>
+            <span>Auditor-friendly</span>
+            <span>No credentials</span>
+          </div>
+        </div>
+        <div class="hero-media card">
+          <!-- Replace with a screenshot later -->
+          <div class="hero-placeholder">Your app screenshot here</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="features">
+      <div class="container">
+        <h2>What you get</h2>
+        <div class="grid">
+          <div class="card feat">
+            <h3>Explainable risk scoring</h3>
+            <p>Country, channel, PEP, and service factors with line-item notes. High/Medium/Low bands at a glance.</p>
+          </div>
+          <div class="card feat">
+            <h3>Monitoring cases</h3>
+            <p>Large cash, structuring windows, and high-risk corridors with short narratives (AI-enhanced).</p>
+          </div>
+          <div class="card feat">
+            <h3>Evidence pack (ZIP)</h3>
+            <p>JSON, Program (HTML), and a <code>manifest.json</code> with SHA-256 hashes. Integrity you can verify.</p>
+          </div>
+          <div class="card feat">
+            <h3>Shareable verify link</h3>
+            <p>A read-only page auditors can use to view file hashes and download your pack.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="how">
+      <div class="container">
+        <h2>How it works</h2>
+        <ol class="steps">
+          <li>Drag & drop Clients + Transactions CSVs</li>
+          <li>We normalise, score, and detect cases</li>
+          <li>Download your evidence pack and share the verify link</li>
+        </ol>
+        <div class="cta-row" style="margin-top:10px">
+          <a class="btn" href="APP_HOST">Open App</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="foot-brand">
+        <img src="/assets/logo.svg" alt="" />
+        <span>TrancheReady</span>
+      </div>
+      <nav class="foot-links">
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="mailto:hello@trancheready.com">Contact</a>
+      </nav>
+      <small>© <span id="y"></span> TrancheReady. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="/assets/main.js"></script>
+</body>
+</html>
