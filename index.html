@@ -4,24 +4,33 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>TrancheReady — AML/CTF Tranche 2 Evidence Packs</title>
-  <meta name="description" content="Upload CSVs → get explainable risk scores, monitoring cases, and a signed SHA-256 evidence pack auditors can verify.">
+  <meta name="description" content="CSV in, ZIP out. Generate explainable AML risk scores, monitoring cases, and a signed SHA-256 evidence pack with a shareable verify link.">
   <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/style.css">
-
-  <!-- Open Graph (optional; add a real image later) -->
   <meta property="og:title" content="TrancheReady — Audit-ready AML packs in minutes">
-  <meta property="og:description" content="CSV in, ZIP out. Signed manifests auditors love.">
-  <!-- <meta property="og:image" content="https://trancheready.com/assets/og-card.png"> -->
+  <meta property="og:description" content="Upload CSVs → signed SHA-256 evidence packs auditors love.">
   <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"SoftwareApplication",
+    "name":"TrancheReady",
+    "applicationCategory":"BusinessApplication",
+    "operatingSystem":"Web",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"AUD"}
+  }
+  </script>
 </head>
 <body>
-  <!-- Top Nav -->
+  <!-- NAV -->
   <header class="nav">
     <div class="container nav-inner">
       <a class="brand" href="/"><img src="/assets/logo.svg" alt="TrancheReady">TrancheReady</a>
-      <nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
+      <nav id="navLinks">
         <a href="#features">Features</a>
-        <a href="#how">How it works</a>
+        <a href="#security">Security</a>
+        <a href="#faq">FAQ</a>
         <a class="btn ghost" id="themeToggle" href="javascript:void(0)">Light/Dark</a>
         <a class="btn" href="APP_HOST">Open App</a>
       </nav>
@@ -40,15 +49,38 @@
             <a class="btn ghost" href="#features">See features</a>
           </div>
           <div class="trust-strip">
-            <span>CSV in • ZIP out</span>
-            <span>Signed manifests</span>
-            <span>Auditor-friendly</span>
-            <span>No credentials</span>
+            <span>CSV in • ZIP out</span><span>Signed manifests</span><span>Auditor-friendly</span><span>No credentials</span>
           </div>
         </div>
         <div class="hero-media card">
-          <!-- Replace with a screenshot later -->
-          <div class="hero-placeholder">Your app screenshot here</div>
+          <!-- Replace with a real screenshot later -->
+          <div class="hero-screenshot">
+            <div class="chrome">
+              <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+              <div class="url">https://app.trancheready.com</div>
+            </div>
+            <div class="shot-grid">
+              <div class="kpi"><span class="kpi-label">High-risk</span><span class="kpi-value">12</span></div>
+              <div class="kpi"><span class="kpi-label">Cases</span><span class="kpi-value">31</span></div>
+              <div class="kpi"><span class="kpi-label">Top risk</span><span class="kpi-value">RU</span></div>
+              <div class="kpi"><span class="kpi-label">Generated</span><span class="kpi-value">Now</span></div>
+            </div>
+            <div class="table-skel"></div>
+          </div>
+        </div>
+      </div>
+      <svg class="blob" viewBox="0 0 600 600" aria-hidden="true"><g opacity=".18"><path d="M300,520Q223,640,110,560Q-3,480,28,339Q60,198,177,143Q294,88,413,144Q532,200,551,320Q570,440,463,480Q356,520,300,520Z"/></g></svg>
+    </section>
+
+    <!-- LOGOS -->
+    <section class="logos">
+      <div class="container logos-inner">
+        <span class="muted">Built for</span>
+        <div class="logo-row">
+          <div class="logo">Legal</div>
+          <div class="logo">Accounting</div>
+          <div class="logo">Real Estate</div>
+          <div class="logo">Advisory</div>
         </div>
       </div>
     </section>
@@ -60,7 +92,7 @@
         <div class="grid">
           <div class="card feat">
             <h3>Explainable risk scoring</h3>
-            <p>Country, channel, PEP, and service factors with line-item notes. High/Medium/Low bands at a glance.</p>
+            <p>Country, channel, PEP, service factors with line-item notes. High/Medium/Low bands at a glance.</p>
           </div>
           <div class="card feat">
             <h3>Monitoring cases</h3>
@@ -68,18 +100,18 @@
           </div>
           <div class="card feat">
             <h3>Evidence pack (ZIP)</h3>
-            <p>JSON, Program (HTML), and a <code>manifest.json</code> with SHA-256 hashes. Integrity you can verify.</p>
+            <p>JSON, Program (HTML), and a <code>manifest.json</code> with SHA-256 hashes for integrity verification.</p>
           </div>
           <div class="card feat">
-            <h3>Shareable verify link</h3>
-            <p>A read-only page auditors can use to view file hashes and download your pack.</p>
+            <h3>Verify link</h3>
+            <p>Share a read-only verification page with recorded file hashes for auditors.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- HOW IT WORKS -->
-    <section id="how" class="how">
+    <section class="how">
       <div class="container">
         <h2>How it works</h2>
         <ol class="steps">
@@ -92,23 +124,86 @@
         </div>
       </div>
     </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="grid t-grid">
+          <div class="card quote">
+            <p>“We produced a defensible AML evidence pack in under an hour. Our auditor loved the signed manifest.”</p>
+            <div class="byline">— Practice Manager, Legal</div>
+          </div>
+          <div class="card quote">
+            <p>“The monitoring cases were spot-on and saved us days of spreadsheet work.”</p>
+            <div class="byline">— Director, Accounting</div>
+          </div>
+          <div class="card quote">
+            <p>“Exactly what we needed for Tranche 2 readiness without exposing system credentials.”</p>
+            <div class="byline">— Compliance Lead, Real Estate</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECURITY -->
+    <section id="security" class="security">
+      <div class="container grid cols-3">
+        <div class="card">
+          <h3>No credentials</h3>
+          <p class="muted">We work from CSV exports only. Keep your core systems isolated.</p>
+        </div>
+        <div class="card">
+          <h3>Integrity checks</h3>
+          <p class="muted">Every evidence pack includes SHA-256 hashes in a signed <code>manifest.json</code>.</p>
+        </div>
+        <div class="card">
+          <h3>Data ownership</h3>
+          <p class="muted">You own your data. Delete runs anytime from your workspace.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq">
+      <div class="container">
+        <h2>FAQ</h2>
+        <div class="accordion">
+          <div class="item">
+            <button class="q">Do you need access to our systems?</button>
+            <div class="a">No. Upload CSVs. That’s it.</div>
+          </div>
+          <div class="item">
+            <button class="q">Is this legal advice?</button>
+            <div class="a">No. We generate evidence and summaries to support your compliance work. Always apply professional judgement.</div>
+          </div>
+          <div class="item">
+            <button class="q">Which sectors are supported?</button>
+            <div class="a">Start with legal, accounting, and real estate. Others on request.</div>
+          </div>
+          <div class="item">
+            <button class="q">How do I start?</button>
+            <div class="a">Click “Open App”, try the sample CSVs, and generate an evidence pack.</div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div class="foot-brand">
-        <img src="/assets/logo.svg" alt="" />
-        <span>TrancheReady</span>
-      </div>
+      <div class="foot-brand"><img src="/assets/logo.svg" alt=""><span>TrancheReady</span></div>
       <nav class="foot-links">
         <a href="#features">Features</a>
-        <a href="#how">How it works</a>
+        <a href="/pricing.html">Pricing</a>
+        <a href="/legal.html">Terms & Privacy</a>
         <a href="mailto:hello@trancheready.com">Contact</a>
       </nav>
       <small>© <span id="y"></span> TrancheReady. All rights reserved.</small>
     </div>
   </footer>
+
+  <a href="#top" class="backtotop" id="backToTop" aria-label="Back to top">↑</a>
 
   <script src="/assets/main.js"></script>
 </body>
