@@ -1,4 +1,7 @@
 // Theme toggle, mobile nav, smooth scroll, FAQ accordion, back-to-top, year
+// top of assets/main.js
+const APP_HOST = 'https://trancheready.onrender.com/'; // or your onrender URL
+
 (function(){
   const root = document.documentElement;
   const toggle = document.getElementById('themeToggle');
