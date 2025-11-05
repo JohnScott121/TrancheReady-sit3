@@ -1,8 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
-  <!-- Analytics (Plausible) -->
-<script defer data-domain="trancheready.com" src="https://plausible.io/js/script.js"></script>
-
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Pricing — TrancheReady</title>
@@ -12,48 +9,45 @@
 <body>
   <header class="nav">
     <div class="container nav-inner">
-      <a class="brand" href="/"><img src="/assets/logo.svg" alt="">TrancheReady</a>
-      <nav>
-        <a href="/#features">Features</a>
-        <a class="active" href="/pricing.html">Pricing</a>
-        <a class="btn" href="APP_HOST">Open App</a>
-      </nav>
+      <a class="brand" href="/"><img src="/assets/logo.svg" alt=""> <span>TrancheReady</span></a>
+      <nav id="navLinks"><a href="/#features">Features</a><a class="active" href="/pricing.html">Pricing</a><a class="btn app-link" data-app>Open App</a></nav>
+      <button class="hamburger" id="hamburger">☰</button>
     </div>
   </header>
+
   <main class="container">
-    <section class="pricing" style="padding:34px 0">
+    <section class="section" style="padding-top:28px">
       <h1>Simple pricing</h1>
       <p class="muted">Start free. Upgrade when you need full reports.</p>
-      <div class="grid" style="grid-template-columns:repeat(3,1fr)">
-        <div class="card">
+
+      <div class="grid three">
+        <div class="card price">
           <h3>Free Scan</h3>
-          <div class="price-tag" style="font-size:28px;font-weight:700;margin:8px 0 12px">$0</div>
-          <ul>
-            <li>Upload 2 CSVs</li><li>Risk counts + top issues</li><li>No card required</li>
-          </ul>
-          <a class="btn" href="APP_HOST">Try free</a>
+          <div class="price-tag">$0</div>
+          <ul><li>Upload 2 CSVs</li><li>Risk counts + top issues</li><li>No card required</li></ul>
+          <a class="btn app-link" data-app>Try free</a>
         </div>
-        <div class="card" style="border-color:#3a56c6;box-shadow:0 12px 36px rgba(92,134,255,.25)">
+
+        <div class="card price featured">
           <h3>Audit Pack</h3>
-          <div class="price-tag" style="font-size:28px;font-weight:700;margin:8px 0 12px">$199 / run</div>
-          <ul>
-            <li>Evidence pack (ZIP)</li><li>Signed manifest</li><li>Verify link</li>
-          </ul>
-          <!-- Replace with your Stripe Payment Link when ready -->
-          <a class="btn" href="APP_HOST">Generate pack</a>
+          <div class="price-tag">$199 / run</div>
+          <ul><li>Evidence pack (ZIP)</li><li>Signed manifest</li><li>Verify link</li></ul>
+          <!-- Later: replace with Stripe Payment Link -->
+          <a class="btn app-link" data-app>Generate pack</a>
         </div>
-        <div class="card">
+
+        <div class="card price">
           <h3>Monthly</h3>
-          <div class="price-tag" style="font-size:28px;font-weight:700;margin:8px 0 12px">$299–$799 / mo</div>
-          <ul>
-            <li>Ongoing monitoring</li><li>Team seats + logo</li><li>Email summaries</li>
-          </ul>
+          <div class="price-tag">$299–$799 / mo</div>
+          <ul><li>Ongoing monitoring</li><li>Team seats + logo</li><li>Email summaries</li></ul>
           <a class="btn ghost" href="mailto:hello@trancheready.com?subject=Monthly%20plan">Talk to us</a>
         </div>
       </div>
+
       <p class="muted small">Prices in AUD; taxes may apply.</p>
     </section>
   </main>
+
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="foot-brand"><img src="/assets/logo.svg" alt=""><span>TrancheReady</span></div>
@@ -61,6 +55,7 @@
       <small>© <span id="y"></span> TrancheReady</small>
     </div>
   </footer>
+
   <script src="/assets/main.js"></script>
 </body>
 </html>
